@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start E-commerce App",
+			"type": "shell",
+			"command": "npx browser-sync start --server --files \"index.html, style.css, data/*.json, src/**/*.js, src/**/*.html\" --port 3000 --no-open",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": {
+				"owner": "browser-sync",
+				"pattern": { "regexp": "^__never_match__$" },
+				"background": {
+					"activeBegins": true,
+					"beginsPattern": "Access URLs",
+					"endsPattern": "Serving files from"
+				}
+			}
+		}
+	]
+}
